@@ -1791,7 +1791,15 @@ namespace EngineApplication
         {
             try
             {
-               
+                //  VARIABLES
+                //  sAccessWS - access workspace (i.e. "http://www.cnblogs.com/zuiyirenjian/admin/file://burt/data/dyndata/pitt.mdb")
+                //  sLineFC - the input line feature class ("base_roads")
+                //  sOutRouteFC - the output route feature class name ("routes")
+                //  sWhereClause - query filter for line feature class if needed (i.e. "[RKey] <> 0")
+                //  sRouteIDField - route ID field (i.e "Rkey")
+                //  sFromMeasureField - the from-measure field (i.e. "BegMP")
+                //  sToMeasureField - the to-measure field (i.e "EndMP")
+                
                 IWorkspaceFactory wsf = new AccessWorkspaceFactoryClass();
                 IWorkspace ws = wsf.OpenFromFile(pAccessWS, 0);
                 IFeatureWorkspace fws = (IFeatureWorkspace)ws;
